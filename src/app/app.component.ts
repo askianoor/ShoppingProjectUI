@@ -9,6 +9,11 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent implements OnInit {
   title = 'Shopping';
   products: object;
+  Cart = [];
+
+  addToCart(item) {
+    this.Cart.push(item);
+  }
 
   constructor(private http: HttpClient) {
 
